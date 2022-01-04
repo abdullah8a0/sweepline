@@ -4,4 +4,8 @@ A sweep line algorithm uses the concept of a line sweeping the Euclidean plane t
 
 The Beachline Algorithm is WIP. During my reasearch I needed to solve an anomaly removal problem for time series data where I needed to preserve the underlying graph while removing sets of datapoints that were not locally connected to the rest of the graph. Known methods were either insufficient or were too slow. For example, astropy's [sigma\_clip](https://docs.astropy.org/en/stable/api/astropy.stats.sigma_clip.html) would remove important outlier information and would not give the desired results on time series data such as these:
 
-![graph 1](ex1.png)
+![graph 1](ex1.png | width=100)
+
+But with a sweepline approach, we can surgicaly remove outlying groups in fast time which would give us this result:
+
+![graph post](ex_post.png | width=100)
